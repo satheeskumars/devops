@@ -1,8 +1,5 @@
 node {
- def server = Artifactory.server "01"
- def buildInfo = Artifactory.newBuildInfo()
-
- // Project Path
+  // Project Path
  def project_path = "petclinic-code"
 
  stage('Git ChechOut') {
@@ -26,10 +23,6 @@ node {
  stage('Maven Package') {
   sh 'mvn package'
  }
-
- 
-
-
 
  stage('Archive Artifact') {
   archiveArtifacts artifacts: 'target/petclinic.war', followSymlinks: false
