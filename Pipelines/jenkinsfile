@@ -27,19 +27,7 @@ node {
   sh 'mvn package'
  }
 
- stage('Build Management') {
-
-	def uploadSpec = """{ 
-		"files": [
-		{
-			"pattern": "**/*.war",
-			"target": "petclinic-repo"
-		}
-		]
-
-	}"""
-	server.upload spec: uploadSpec
-}
+ 
 
 stage('Publish Build Info'){
    server.publishBuildInfo buildInfo
