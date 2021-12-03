@@ -33,7 +33,7 @@ node {
  }
  
  stage('Email Notification'){
- emailext attachLog: true, body: '', subject: 'Mindtree-DevOps-Jenkins', to: 'satheeskumarbe@gmail.com'
+ emailext (attachLog: true, body: '', subject: 'Mindtree-DevOps-Jenkins', to: 'satheeskumarbe@gmail.com')
  }
 
 }
