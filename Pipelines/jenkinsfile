@@ -6,7 +6,7 @@ node {
  def project_path = "petclinic-code"
 
  stage('Git ChechOut') {
-  git branch: 'main', url: 'https://github.com/satheeskumars/sathees-devops.git' 
+  git branch: 'main', url: 'https://github.com/satheeskumars/devops.git' 
  }
 
  dir(project_path) {
