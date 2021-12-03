@@ -31,6 +31,10 @@ node {
  stage('Docker Deployment') {
   sh 'docker-compose up -d --build'
  }
+ 
+ stage('Email Notification'){
+ emailext attachLog: true, body: '', subject: 'Mindtree-DevOps-Jenkins', to: 'satheeskumarbe@gmail.com'
+ }
 
 }
 }
