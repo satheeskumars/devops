@@ -3,7 +3,7 @@ node {
  def buildInfo = Artifactory.newBuildInfo()
 
  // Project Path
- def project_path = "03-App-Code/petclinic-code"
+ def project_path = "petclinic-code"
 
  stage('Git ChechOut') {
   git branch: 'main', url: 'https://github.com/satheeskumars/sathees-devops.git' 
