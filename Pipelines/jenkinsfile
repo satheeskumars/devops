@@ -29,9 +29,7 @@ node {
 
  
 
-stage('Publish Build Info'){
-   server.publishBuildInfo buildInfo
-}
+
 
  stage('Archive Artifact') {
   archiveArtifacts artifacts: 'target/petclinic.war', followSymlinks: false
