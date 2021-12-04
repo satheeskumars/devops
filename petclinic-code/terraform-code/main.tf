@@ -7,7 +7,7 @@ resource "aws_instance" "backend" {
     prevent_destroy = false
   }
   tags = {
-    Name = "Dev-App"
+    Name = "Mindtree"
   }
 
   connection { 
